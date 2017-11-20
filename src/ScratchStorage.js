@@ -124,6 +124,9 @@ class ScratchStorage {
      *   error here, but (for example) HTTP 403 does.
      */
     load (assetType, assetId, dataFormat) {
+        console.log('ss -> load ');
+        console.log(assetId);
+        
         /** @type {Helper[]} */
         const helpers = [this.builtinHelper, this.localHelper, this.webHelper];
         const errors = [];
